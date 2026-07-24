@@ -59,7 +59,7 @@ describe("createCompatibleApi", () => {
 
     const url = new URL(requests[0]!.url)
     expect(url.pathname).toBe("/session/ses_1")
-    expect(requests[0]!.headers.get("x-opencode-directory")).toBe("%2Frepo")
+    expect(requests[0]!.headers.get("x-agintes-directory")).toBe("%2Frepo")
     expect(requests[0]!.method).toBe("PATCH")
     expect(await requests[0]!.json()).toMatchObject({ time: { archived: expect.any(Number) } })
   })

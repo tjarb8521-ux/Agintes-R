@@ -2,7 +2,7 @@
   "version": "6",
   "dialect": "mysql",
   "id": "e49321c9-2b03-4e2c-b2f0-76fbb88088ea",
-  "prevIds": ["9809797a-e6f6-418c-8532-196553b315b8"],
+  "prevIds": ["19797a-e6f6-418c-8532-196553b315b8"],
   "ddl": [
     {
       "name": "account",

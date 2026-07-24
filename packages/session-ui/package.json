@@ -1,5 +1,5 @@
 {
-  "name": "@opencode-ai/session-ui",
+  "name": "@agintes-ai/session-ui",
   "version": "1.18.4",
   "private": true,
   "type": "module",
@@ -39,10 +39,10 @@
   },
   "dependencies": {
     "@kobalte/core": "catalog:",
-    "@opencode-ai/client": "file:../app/vendor/opencode-ai-client-1.17.13.tgz",
-    "@opencode-ai/core": "workspace:*",
-    "@opencode-ai/sdk": "workspace:*",
-    "@opencode-ai/ui": "workspace:*",
+    "@agintes-ai/client": "file:../app/vendor/agintes-ai-client-1.17.13.tgz",
+    "@agintes-ai/core": "workspace:*",
+    "@agintes-ai/sdk": "workspace:*",
+    "@agintes-ai/ui": "workspace:*",
     "@pierre/diffs": "catalog:",
     "@shikijs/stream": "catalog:",
     "@shikijs/transformers": "3.9.2",

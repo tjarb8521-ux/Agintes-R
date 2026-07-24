@@ -1,5 +1,5 @@
 import { expect, test, type Page, type Route } from "@playwright/test"
-import { base64Encode } from "@opencode-ai/core/util/encode"
+import { base64Encode } from "@agintes-ai/core/util/encode"
 import { currentSession } from "../utils/mock-server"
 
 const server = "http://127.0.0.1:4096"
@@ -12,7 +12,7 @@ test("pressing mouse down on a tab navigates before mouse up", async ({ page }) 
     ({ server, sessionA, sessionB }) => {
       localStorage.setItem("settings.v3", JSON.stringify({ general: { newLayoutDesigns: true } }))
       localStorage.setItem(
-        "opencode.window.browser.dat:tabs",
+        "agintes.window.browser.dat:tabs",
         JSON.stringify([
           { type: "session", server, sessionId: sessionA },
           { type: "session", server, sessionId: sessionB },

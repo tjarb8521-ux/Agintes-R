@@ -1,35 +1,35 @@
 import { expect, test } from "bun:test"
 import { Schema } from "effect"
-import { AgentV2 } from "@opencode-ai/core/agent"
-import { ModelV2 } from "@opencode-ai/core/model"
-import { SessionV2 } from "@opencode-ai/core/session"
-import { Agent } from "@opencode-ai/schema/agent"
-import { Location } from "@opencode-ai/schema/location"
-import { Model } from "@opencode-ai/schema/model"
-import { AgentAttachment, FileAttachment, Prompt, Source } from "@opencode-ai/schema/prompt"
-import { Provider } from "@opencode-ai/schema/provider"
-import { Project } from "@opencode-ai/schema/project"
-import { ProjectDirectories } from "@opencode-ai/schema/project-directories"
-import { PermissionV1 } from "@opencode-ai/schema/permission-v1"
-import { Session } from "@opencode-ai/schema/session"
-import { SessionInput } from "@opencode-ai/schema/session-input"
-import { SessionMessage } from "@opencode-ai/schema/session-message"
-import { Workspace } from "@opencode-ai/schema/workspace"
-import { Command } from "@opencode-ai/schema/command"
-import { Connection } from "@opencode-ai/schema/connection"
-import { Credential } from "@opencode-ai/schema/credential"
-import { FileSystem } from "@opencode-ai/schema/filesystem"
-import { Integration } from "@opencode-ai/schema/integration"
-import { LLM } from "@opencode-ai/schema/llm"
-import { Permission } from "@opencode-ai/schema/permission"
-import { Plugin } from "@opencode-ai/schema/plugin"
-import { Pty } from "@opencode-ai/schema/pty"
-import { Reference } from "@opencode-ai/schema/reference"
-import { SessionTodo } from "@opencode-ai/schema/session-todo"
-import { Skill } from "@opencode-ai/schema/skill"
-import { AbsolutePath, DateTimeUtcFromMillis, optional, statics } from "@opencode-ai/schema/schema"
-import { ProviderV2 } from "@opencode-ai/core/provider"
-import { PluginV2 } from "@opencode-ai/core/plugin"
+import { AgentV2 } from "@agintes-ai/core/agent"
+import { ModelV2 } from "@agintes-ai/core/model"
+import { SessionV2 } from "@agintes-ai/core/session"
+import { Agent } from "@agintes-ai/schema/agent"
+import { Location } from "@agintes-ai/schema/location"
+import { Model } from "@agintes-ai/schema/model"
+import { AgentAttachment, FileAttachment, Prompt, Source } from "@agintes-ai/schema/prompt"
+import { Provider } from "@agintes-ai/schema/provider"
+import { Project } from "@agintes-ai/schema/project"
+import { ProjectDirectories } from "@agintes-ai/schema/project-directories"
+import { PermissionV1 } from "@agintes-ai/schema/permission-v1"
+import { Session } from "@agintes-ai/schema/session"
+import { SessionInput } from "@agintes-ai/schema/session-input"
+import { SessionMessage } from "@agintes-ai/schema/session-message"
+import { Workspace } from "@agintes-ai/schema/workspace"
+import { Command } from "@agintes-ai/schema/command"
+import { Connection } from "@agintes-ai/schema/connection"
+import { Credential } from "@agintes-ai/schema/credential"
+import { FileSystem } from "@agintes-ai/schema/filesystem"
+import { Integration } from "@agintes-ai/schema/integration"
+import { LLM } from "@agintes-ai/schema/llm"
+import { Permission } from "@agintes-ai/schema/permission"
+import { Plugin } from "@agintes-ai/schema/plugin"
+import { Pty } from "@agintes-ai/schema/pty"
+import { Reference } from "@agintes-ai/schema/reference"
+import { SessionTodo } from "@agintes-ai/schema/session-todo"
+import { Skill } from "@agintes-ai/schema/skill"
+import { AbsolutePath, DateTimeUtcFromMillis, optional, statics } from "@agintes-ai/schema/schema"
+import { ProviderV2 } from "@agintes-ai/core/provider"
+import { PluginV2 } from "@agintes-ai/core/plugin"
 
 test("Core reuses the canonical shared schemas", async () => {
   const [
@@ -55,27 +55,27 @@ test("Core reuses the canonical shared schemas", async () => {
     coreSchema,
     coreWorkspace,
   ] = await Promise.all([
-    import("@opencode-ai/core/command"),
-    import("@opencode-ai/core/integration/connection"),
-    import("@opencode-ai/core/credential"),
-    import("@opencode-ai/core/filesystem"),
-    import("@opencode-ai/core/integration"),
-    import("@opencode-ai/core/location"),
-    import("@opencode-ai/llm"),
-    import("@opencode-ai/core/permission"),
-    import("@opencode-ai/core/v1/permission"),
-    import("@opencode-ai/core/project/copy"),
-    import("@opencode-ai/core/pty"),
-    import("@opencode-ai/core/project/schema"),
-    import("@opencode-ai/core/reference"),
-    import("@opencode-ai/core/session/input"),
-    import("@opencode-ai/core/session/message"),
-    import("@opencode-ai/core/session/todo"),
-    import("@opencode-ai/core/session/prompt"),
-    import("@opencode-ai/core/skill"),
-    import("@opencode-ai/core/v2-schema"),
-    import("@opencode-ai/core/schema"),
-    import("@opencode-ai/core/workspace"),
+    import("@agintes-ai/core/command"),
+    import("@agintes-ai/core/integration/connection"),
+    import("@agintes-ai/core/credential"),
+    import("@agintes-ai/core/filesystem"),
+    import("@agintes-ai/core/integration"),
+    import("@agintes-ai/core/location"),
+    import("@agintes-ai/llm"),
+    import("@agintes-ai/core/permission"),
+    import("@agintes-ai/core/v1/permission"),
+    import("@agintes-ai/core/project/copy"),
+    import("@agintes-ai/core/pty"),
+    import("@agintes-ai/core/project/schema"),
+    import("@agintes-ai/core/reference"),
+    import("@agintes-ai/core/session/input"),
+    import("@agintes-ai/core/session/message"),
+    import("@agintes-ai/core/session/todo"),
+    import("@agintes-ai/core/session/prompt"),
+    import("@agintes-ai/core/skill"),
+    import("@agintes-ai/core/v2-schema"),
+    import("@agintes-ai/core/schema"),
+    import("@agintes-ai/core/workspace"),
   ])
 
   const schemas = [

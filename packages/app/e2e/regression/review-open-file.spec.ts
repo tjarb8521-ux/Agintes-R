@@ -1,9 +1,9 @@
-import { base64Encode } from "@opencode-ai/core/util/encode"
+import { base64Encode } from "@agintes-ai/core/util/encode"
 import { expect, test } from "@playwright/test"
-import { mockOpenCodeServer } from "../utils/mock-server"
+import { mockAgintesServer } from "../utils/mock-server"
 import { expectSessionTitle } from "../utils/waits"
 
-const directory = "C:/OpenCode/ReviewOpenFile"
+const directory = "C:/Agintes/ReviewOpenFile"
 const projectID = "proj_review_open_file"
 const sessionID = "ses_review_open_file"
 const title = "Review open file"
@@ -13,7 +13,7 @@ test.use({ viewport: { width: 1440, height: 900 } })
 
 test("opens and searches project files inline", async ({ page }) => {
   const searches: { query: string; dirs?: string; limit?: number }[] = []
-  await mockOpenCodeServer(page, {
+  await mockAgintesServer(page, {
     directory,
     project: {
       id: projectID,
@@ -26,13 +26,13 @@ test("opens and searches project files inline", async ({ page }) => {
     provider: {
       all: [
         {
-          id: "opencode",
-          name: "OpenCode",
+          id: "agintes",
+          name: "Agintes",
           models: { test: { id: "test", name: "Test", limit: { context: 200_000 } } },
         },
       ],
-      connected: ["opencode"],
-      default: { providerID: "opencode", modelID: "test" },
+      connected: ["agintes"],
+      default: { providerID: "agintes", modelID: "test" },
     },
     sessions: [
       {
@@ -64,22 +64,22 @@ test("opens and searches project files inline", async ({ page }) => {
     ({ directory, server, sessionID }) => {
       localStorage.setItem("settings.v3", JSON.stringify({ general: { newLayoutDesigns: true } }))
       localStorage.setItem(
-        "opencode.global.dat:server",
+        "agintes.global.dat:server",
         JSON.stringify({
           projects: { local: [{ worktree: directory, expanded: true }] },
           lastProject: { local: directory },
         }),
       )
       localStorage.setItem(
-        "opencode.global.dat:layout",
+        "agintes.global.dat:layout",
         JSON.stringify({ review: { diffStyle: "split", panelOpened: true } }),
       )
       localStorage.setItem(
-        "opencode.global.dat:review-panel-v2",
+        "agintes.global.dat:review-panel-v2",
         JSON.stringify({ sidebarOpened: false, sidebarWidth: 240, expandMode: "collapse" }),
       )
       localStorage.setItem(
-        "opencode.window.browser.dat:tabs",
+        "agintes.window.browser.dat:tabs",
         JSON.stringify([{ type: "session", server, sessionId: sessionID }]),
       )
     },

@@ -1,8 +1,8 @@
 import { Effect } from "effect"
-import { Fff } from "@opencode-ai/core/filesystem/fff.bun"
+import { Fff } from "@agintes-ai/core/filesystem/fff.bun"
 import { AppRuntime } from "@/effect/app-runtime"
-import { FileSystem } from "@opencode-ai/core/filesystem"
-import { AbsolutePath } from "@opencode-ai/core/schema"
+import { FileSystem } from "@agintes-ai/core/filesystem"
+import { AbsolutePath } from "@agintes-ai/core/schema"
 import { InstanceStore } from "@/project/instance-store"
 
 const dir = AbsolutePath.make(process.cwd())

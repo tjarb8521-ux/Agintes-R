@@ -1,5 +1,5 @@
 {
-  "$schema": "https://opencode.ai/theme.json",
+  "$schema": "https://agintes.ai/theme.json",
   "defs": {
     "background": "#193549",
     "backgroundAlt": "#122738",
@@ -42,7 +42,7 @@
     },
     "warning": {
       "dark": "yellow",
-      "light": "#ff9800"
+      "light": "#ff10"
     },
     "success": {
       "dark": "green",
@@ -135,7 +135,7 @@
     },
     "markdownHeading": {
       "dark": "yellow",
-      "light": "#ff9800"
+      "light": "#ff10"
     },
     "markdownLink": {
       "dark": "blue",
@@ -195,7 +195,7 @@
     },
     "syntaxFunction": {
       "dark": "yellow",
-      "light": "#ff9800"
+      "light": "#ff10"
     },
     "syntaxVariable": {
       "dark": "foreground",

@@ -27,7 +27,7 @@ export interface MockServerConfig {
   sessionStatus?: unknown
 }
 
-export async function mockOpenCodeServer(page: Page, config: MockServerConfig) {
+export async function mockAgintesServer(page: Page, config: MockServerConfig) {
   const cursors = new Map<string, string>()
   let nextCursor = 0
   const staticRoutes: Record<string, unknown> = {
@@ -37,7 +37,7 @@ export async function mockOpenCodeServer(page: Page, config: MockServerConfig) {
       config: config.directory,
       worktree: config.directory,
       directory: config.directory,
-      home: "C:/OpenCode",
+      home: "C:/Agintes",
     },
     "/project": [config.project],
     "/project/current": config.project,
@@ -138,7 +138,7 @@ export async function mockOpenCodeServer(page: Page, config: MockServerConfig) {
         config: config.directory,
         worktree: config.directory,
         directory: config.directory,
-        home: "C:/OpenCode",
+        home: "C:/Agintes",
       })
     if (path === "/api/permission/request")
       return json(route, {

@@ -1,7 +1,7 @@
-export * as OpenCode from "./opencode"
+export * as Agintes from "./agintes"
 export * as Tool from "./tool"
 
-export { ClientError } from "@opencode-ai/client/effect"
+export { ClientError } from "@agintes-ai/client/effect"
 export {
   AbsolutePath,
   Agent,
@@ -13,5 +13,5 @@ export {
   Session,
   SessionInput,
   SessionMessage,
-} from "@opencode-ai/client/effect"
-export type { OpenCodeEvent } from "@opencode-ai/client/effect"
+} from "@agintes-ai/client/effect"
+export type { AgintesEvent } from "@agintes-ai/client/effect"
