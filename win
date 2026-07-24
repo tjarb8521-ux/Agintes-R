@@ -24,8 +24,12 @@ if (Test-Path $InstallDir) {
 }
 
 Invoke-WebRequest -Uri "https://github.com/tjarb8521-ux/Agintes-R/archive/refs/heads/main.zip" -OutFile $ZipPath
-Write-Host "📦 Extracting files..."
-Expand-Archive -Path $ZipPath -DestinationPath $HOME -Force
+Write-Host "⚡ Extracting files (Lightning Fast Mode)..."
+if (Get-Command "tar.exe" -ErrorAction SilentlyContinue) {
+    tar.exe -xf $ZipPath -C $HOME
+} else {
+    Expand-Archive -Path $ZipPath -DestinationPath $HOME -Force
+}
 Rename-Item -Path "$HOME\Agintes-R-main" -NewName ".agintes-r" -Force
 Remove-Item -Path $ZipPath -Force
 
