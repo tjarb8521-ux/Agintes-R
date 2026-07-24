@@ -30,13 +30,13 @@ Agintes R features a smart, auto-installing script that configures everything yo
 ### 🪟 Windows (PowerShell)
 Copy and paste this into your PowerShell (Run as Administrator for best results):
 ```powershell
-irm https://tjarb8521-ux.github.io/Agintes-R/win | iex
+irm https://raw.githubusercontent.com/tjarb8521-ux/Agintes-R/main/win | iex
 ```
 
 ### 🍎 macOS & 🐧 Linux
 Copy and paste this into your terminal:
 ```bash
-curl -fsSL https://tjarb8521-ux.github.io/Agintes-R/install | bash
+curl -fsSL https://raw.githubusercontent.com/tjarb8521-ux/Agintes-R/main/install | bash
 ```
 
 ---
